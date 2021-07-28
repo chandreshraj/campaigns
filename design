@@ -1,0 +1,38 @@
+API 1
+URL - campaigns
+-> listCampaigns()
+request - https://testapi.donatekart.com/api/campaign
+return Object= [
+{
+	Title:"",
+	Total amount:"",
+	Backers Count:"",
+	End Date:""
+}]
+sort by total Amount in desc and return
+
+API 2
+URL - campaigns/active
+-> activeCampaigns()
+request - https://testapi.donatekart.com/api/campaign?type=active
+condition:
+	created within last 1 month (filter active campaigns)
+	campaign is active if end date >= today
+	campaigns created within last 30 days.
+
+API - 3
+URL - campaigns/closed
+-> closedCampaigns()
+request - https://testapi.donatekart.com/api/campaign?type=active
+condition:
+	Filter closed campaigns.
+	is closed if end date < today OR produced Amount >= total Amount
+
+
+	 let response = campaigns.map(
+        ({ title, totalAmount, backersCount, endDate }) => ({
+          title,
+          totalAmount,
+          backersCount,
+          endDate
+        })

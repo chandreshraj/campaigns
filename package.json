@@ -1,0 +1,17 @@
+{
+  "name": "campaign",
+  "version": "1.0.0",
+  "description": "Campaign Management Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chandresh R",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "winston": "^3.3.3"
+  }
+}
